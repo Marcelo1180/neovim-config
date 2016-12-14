@@ -26,6 +26,7 @@ Plug 'benjie/neomake-local-eslint.vim'
 Plug 'dkprice/vim-easygrep'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-obsession'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()                                                               "Finish Vundle initialization
 
@@ -252,7 +253,7 @@ xnoremap <tab> >gv
 
 " Resize window with shift + and shift -
 nnoremap + <c-w>5>
-nnoremap _ <c-w>5<
+nnoremap _ <c-w>6<
 
 " Center highlighted search
 nnoremap n nzz
@@ -299,4 +300,25 @@ let g:neomake_javascript_enabled_makers = ['eslint']                            
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '                                "Set up spacing for sidebar icons
 
+" Color Transparente Background
 hi Normal ctermbg=NONE
+
+" Multiples cursores
+highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+highlight link multiple_cursors_visual Visual
+
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_key='<F6>'
+let g:multi_cursor_next_key='<F7>'
+let g:multi_cursor_prev_key='<F8>'
+let g:multi_cursor_skip_key='<F9>'
+let g:multi_cursor_quit_key='<Esc>'
+
+" Default mapping
+"let g:multi_cursor_next_key='<C-a'
+
+"let g:multi_cursor_start_key='<C-a'
+"let g:multi_cursor_start_word_key='g<C-a'
+
+"nnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>
+"vnoremap <silent> <M-j> :MultipleCursorsFind <C-R>/<CR>

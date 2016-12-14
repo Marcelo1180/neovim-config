@@ -1,22 +1,75 @@
 
 ========
 
-This is my Neovim editor setup.
-Feel free to fork it
-and submit a pull request if you found any bug.
+Esta es mi configuración de Neovim
 
-Instalation
+# Instalación
 -----------
+## Configuración de Parametros
 
-    $ git clone https://github.com/kristijanhusak/neovim-config.git ~/neovim-config
-    $ cd ~/neovim-config
-    $ chmod +x ./install.sh
-    $ ./install.sh
-    $ nvim
-    $ :PlugInstall
-    $ :UpdateRemotePlugins
+### Neovim
 
-Plugins
+```sh
+sudo apt-get -f install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip libmsgpack-dev libuv-dev libluajit-5.1-dev
+
+git clone https://github.com/neovim/neovim.git
+
+cd neovim
+make
+sudo make install
+
+sudo ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+sudo ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+```
+
+### PluginManager para NeoVim
+
+```sh
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+nvim
+:PlugInstall
+```
+
+### Tmux
+
+```sh
+sudo apt-get -f tmux
+```
+
+### Personalización
+
+```sh
+git clone https://github.com/kristijanhusak/neovim-config.git ~/neovim-config
+cd ~/neovim-config
+chmod +x ./install.sh
+./install.sh
+```
+
+### Instalación Plugins
+
+Instalación de python3 para deoplete plugin autocomplete
+```sh
+sudo apt-get install python3-setuptools
+sudo apt-get install python3-pip
+sudo pip install neovim
+sudo pip3 install neovim
+```
+
+Instalación de plugins para neovim
+```sh
+nvim
+:PlugInstall
+:UpdateRemotePlugins
+```
+
+Acutalización de configuración neovim
+```sh
+nvim
+:so %
+```
+
+## Plugins
 ----------------
 
 * [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
@@ -44,8 +97,9 @@ Plugins
 * [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)
 * [benjie/neomake-local-eslint.vim](https://github.com/benjie/neomake-local-eslint.vim)
 * [dkprice/vim-easygrep](https://github.com/dkprice/vim-easygrep)
+* [tpope/vim-obsession](https://github.com/tpope/vim-obsession)
 
-License
+## License
 -------
 
 This project is licensed under MIT License (see LICENSE file for details). But
