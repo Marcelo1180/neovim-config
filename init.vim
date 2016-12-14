@@ -25,6 +25,7 @@ Plug 'honza/vim-snippets'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'dkprice/vim-easygrep'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-obsession'
 
 call plug#end()                                                               "Finish Vundle initialization
 
@@ -297,3 +298,5 @@ let g:neomake_php_phpcs_args_standard = 'PSR2'                                  
 let g:neomake_javascript_enabled_makers = ['eslint']                            "Enable these linters for js
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '                                "Set up spacing for sidebar icons
+
+hi Normal ctermbg=NONE
