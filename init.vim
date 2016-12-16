@@ -19,7 +19,7 @@ Plug 'duff/vim-bufonly'
 Plug 'gregsexton/MatchTag'
 Plug 'sheerun/vim-polyglot'
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'honza/vim-snippets'
 Plug 'benjie/neomake-local-eslint.vim'
@@ -27,6 +27,8 @@ Plug 'dkprice/vim-easygrep'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-obsession'
 Plug 'terryma/vim-multiple-cursors'
+
+Plug 'troydm/zoomwintab.vim'
 
 call plug#end()                                                               "Finish Vundle initialization
 
@@ -258,6 +260,10 @@ nnoremap _ <c-w>6<
 " Center highlighted search
 nnoremap n nzz
 nnoremap N Nzz
+
+" Zoom tab en vim
+" nnoremap <Leader>e :ZoomWinTabToogle<CR>
+
 
 " ================ plugins setups ========================
 
