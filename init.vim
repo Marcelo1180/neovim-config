@@ -262,7 +262,7 @@ nnoremap n nzz
 nnoremap N Nzz
 
 " Zoom tab en vim
-" nnoremap <Leader>e :ZoomWinTabToogle<CR>
+nnoremap <Leader>e :ZoomWinTabToggle<CR>
 
 
 " ================ plugins setups ========================
