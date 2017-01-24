@@ -24,3 +24,8 @@ then
     echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> ~/.bashrc
 fi
 
+if ! grep -Fxq 'alias mux=tmuxifier' ~/.bashrc
+then
+    echo 'alias mux=tmuxifier' >> ~/.bashrc
+fi
+
