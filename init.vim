@@ -30,6 +30,10 @@ Plug 'terryma/vim-multiple-cursors'
 
 Plug 'troydm/zoomwintab.vim'
 
+" Markdown preview
+Plug 'neovim/node-host', { 'do': 'npm install' }
+Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
+
 call plug#end()                                                               "Finish Vundle initialization
 
 filetype plugin indent on                                                       "Enable plugins and indents by filetype

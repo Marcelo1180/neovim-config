@@ -29,3 +29,6 @@ then
     echo 'alias mux=tmuxifier' >> ~/.bashrc
 fi
 
+# Instalacion TODO.tx
+# sudo apt-get install todotxt-cli
+
