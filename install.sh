@@ -24,10 +24,21 @@ then
     echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> ~/.bashrc
 fi
 
+if ! grep -Fxq 'export TMUXIFIER_LAYOUT_PATH="$HOME/neovim-config/tmuxifier/layouts"' ~/.bashrc
+then
+    echo 'export TMUXIFIER_LAYOUT_PATH="$HOME/neovim-config/tmuxifier/layouts"' >> ~/.bashrc
+fi
+
 if ! grep -Fxq 'alias mux=tmuxifier' ~/.bashrc
 then
     echo 'alias mux=tmuxifier' >> ~/.bashrc
 fi
+
+sudo apt-get install cowsay
+sudo pip install fortune
+sudo pip install httpie
+
+
 
 # Instalacion TODO.tx
 # sudo apt-get install todotxt-cli
