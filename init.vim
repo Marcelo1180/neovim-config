@@ -19,7 +19,8 @@ Plug 'duff/vim-bufonly'
 Plug 'gregsexton/MatchTag'
 Plug 'sheerun/vim-polyglot'
 Plug 'kristijanhusak/vim-hybrid-material'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "pip3 install neovim
+Plug 'zchee/deoplete-jedi'
 Plug 'Shougo/neosnippet'
 Plug 'honza/vim-snippets'
 Plug 'benjie/neomake-local-eslint.vim'
