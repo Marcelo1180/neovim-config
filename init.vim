@@ -28,12 +28,13 @@ Plug 'dkprice/vim-easygrep'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-obsession'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'kannokanno/previm'
 
 Plug 'troydm/zoomwintab.vim'
 
 " Markdown preview
-Plug 'neovim/node-host', { 'do': 'npm install' }
-Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
+"Plug 'neovim/node-host', { 'do': 'npm install' }
+"Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
 
 call plug#end()                                                               "Finish Vundle initialization
 
@@ -310,6 +311,29 @@ let g:neomake_php_phpcs_args_standard = 'PSR2'                                  
 let g:neomake_javascript_enabled_makers = ['eslint']                            "Enable these linters for js
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '                                "Set up spacing for sidebar icons
+
+" ================ plugin FILETYPE  ==========================
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+
+" ================ plugin LINTER PEP8 ========================
+let g:neomake_python_flake8_maker = {
+    \ 'args': ['--ignore=E221,E241,E272,E251,W702,E203,E201,E202',  '--format=default'],
+    \ 'errorformat':
+        \ '%E%f:%l: could not compile,%-Z%p^,' .
+        \ '%A%f:%l:%c: %t%n %m,' .
+        \ '%A%f:%l: %t%n %m,' .
+        \ '%-G%.%#',
+    \ }
+let g:neomake_python_enable_makers = ['flake8']
+
+" ================ plugin MARDOWNPREVIEW ========================
+let g:previm_open_cmd = 'sensible-browser'					"Previm para visualizar markdown browser por defecto
+
+augroup PrevimSettings
+    autocmd!
+        autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 " Color Transparente Background
 hi Normal ctermbg=NONE
